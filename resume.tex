@@ -46,6 +46,7 @@
 
 % Sections formatting
 \titleformat{\section}{\LARGE\bfseries\raggedright}{}{0em}{\vspace{-10pt}}
+\newcommand{\sectiontitle}[1]{\section{\texorpdfstring{#1 \color{secondary} \xfilll[0pt]{1pt}}{#1}}}
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -152,74 +153,61 @@
 
 %----------- SKILLS -----------
 
-\section{Skills \color{secondary}\xfilll[0pt]{1pt}}
+\sectiontitle{Skills}
   \resumeSkillsListStart
 
-        {Programming} & { Rust, C/C++, C\#, Java, Python, Shell Scripting, Haskell, Assembly } \\
+        {Programming} & { Java, Rust, C/C++, C\#, Python } \\
         
-        {Frameworks} & { Rocket, Bevy, Iced, Qt, MongoDB, SVN, Ansible, Azure } \\
+        {Frameworks} & { Spring, .NET, Rocket, Bevy, Iced, Qt, MongoDB } \\
 
-        {Languages} & { French (native), English (native)} \\
+        {Languages} & { French (native), English (fluent)} \\
         
-        {Other} & { Git, Docker, Linux, REST, Agile, Scrum, OOP, DevOps} \\
+        {Other} & { SVN, Git, Docker, Linux, REST, Ansible, Azure, CI/CD, Gradle, Maven, SQL, NoSQL } \\
         
 
   \resumeSkillsListEnd
 
 
 
-%----------- EDUCATION -----------
-
-\section{Education \color{secondary}\xfilll[0pt]{1pt}}
-  \vspace{3pt}
-  \resumeSubHeadingListStart
-
-    \resumeEducationDescHeading
-      {Master's Degree in Computer Science}{September 2020 - September 2025}
-      {EPITECH}{France}
-      {Bachelor's Degree in Computer Science obtained in July 2023}
-
-    \vspace{5pt}
-
-    \resumeEducationHeading
-      {Exchange Student in Computer Science
-      % \normalfont{(Admission rate: 0.09\%)}
-      }{September 2023 - July 2024}
-      {Korea University}{South Korea}
-
-  \resumeSubHeadingListEnd
-
-
-
 %----------- EXPERIENCE -----------
 
-\section{Work Experience \color{secondary}\xfilll[0pt]{1pt}}
+\sectiontitle{Work Experience}
   \vspace{3pt}
   \resumeSubHeadingListStart
+
+    % \resumeSubheading
+    %  {Regional Assitant}{September 2024 - February 2025}
+    %  {Epitech}{Montpellier, France}
+    %    \resumeItemListStart
+    %        \resumeItem{Help students.}
+    %    \resumeItemListEnd
 
     \resumeSubheading
       {Backend Intern}{April 2023 - August 2023}
       {SLB}{Montpellier, France}
         \resumeItemListStart
-            \resumeItem{Development of an abstraction layer in C\# to enhance dependency injection capabilities for REST API requests.}
-            \resumeItem{Utilized C\#, Azure DevOps, Python, and the .NET framework to optimize backend processes.}
-            \resumeItem{Gained more knowledge within the oil industry, and acquired valuable insights into emerging new energy projects at SLB}
+            \resumeItem{Collaborated with teams of international developers to implement a cloud-based environment, with background jobs capabilities, and an improved UI/UX, enhancing our leading solution: Petrel, used by more than 300 E\&P clients globally, solution aimed at geologists, to extract digital modeling of the subsurface, key in understanding its history and structure, crucial for finding oil and gas reservoirs and drilling wells in complex environments.}
+            \resumeItem{Linked the various components of the cloud-based environment with Delfi, SLB's platform following oil and gas data platform (OSDU) standards, through HTTP Client Libraries in C\# and Python.}
+            \resumeItem{Integrated CI/CD pipelines into existing projects using Azure DevOps.}
+            \resumeItem{Improved documentation of exisiting REST APIs, and created an onboarding wiki for these REST APIs.}
+            %\resumeItem{Utilized C\#, Azure DevOps, Python, and the .NET framework to optimize backend processes.}
+            %\resumeItem{Gained more knowledge within the oil industry, and acquired valuable insights into emerging new energy projects at SLB}
         \resumeItemListEnd
 
     \resumeSubheading
       {Backend Developer}{October 2022 - February 2023}
       {Glanceable}{Remote, France}
         \resumeItemListStart
-            \resumeItem{REST API development in Rust using the Actix Web framework.}
-            \resumeItem{Integration of the following APIs: Facebook Graph, Apple, Google Play.}
-            \resumeItem{AI Development with "onnx" crate in Rust.}
+            \resumeItem{Implemented new REST API routes using the Actix Web framework, and integrated Sentry to the project to monitor and track errors, thus helping in removing 100\% of previously unknown crashes and errors.}
+            \resumeItem{Integrated Facebook Graph, Apple and Google Play APIs to retrieve user feedback, training our AI user satisfaction model.}
+            \resumeItem{Converted the Python-based AI codebase to Rust using the ONNX crate to improve performance and efficiency.}
         \resumeItemListEnd
 
     \resumeSubheading
-      {Fullstack Developer}{September 2021 - December 2021}
+      {Fullstack Developer}{July 2021 - December 2021}
       {Skwad}{Montpellier, France}
         \resumeItemListStart
-            \resumeItem{Facebook Graph API \& Web scrapping, to retrieve Instagram posts' information.}
+            \resumeItem{Facebook Graph API \& Web scraping, to retrieve Instagram posts' information.}
             \resumeItem{PHP Website development with the Laravel framework,}
             \resumeItem{Typescript/JavaScript Mobile app development for iOS and Android, using the Ionic framework.}
         \resumeItemListEnd
@@ -230,7 +218,7 @@
 
 %----------- PROJECTS -----------
 
-\section{Projects \color{secondary}\xfilll[0pt]{1pt}}
+\sectiontitle{Projects}
     \vspace{3pt}
     \resumeSubHeadingListStart
       
@@ -238,28 +226,61 @@
         {Grisked}{https://github.com/grisked}
         {Rust, Iced, Docker}
         
-        {\small\fontseries{l}\selectfont Remake of the old Microsoft Money software in Rust, using the iced.rs framework.}
-      
-%      \resumeProjectHeading
-%        {UverWorld}{https://github.com/uver-world}
-%        {Project-Lead, Lead-Dev, Rust, Bevy, Typescript, Docker, REST, WebRTC}
-        
-%        {UverWorld is simulation software, with a client-side made in JavaScript and a simulation rendering engine made in Rust streaming to the client through WebRTC. The objective is to make the process of developing simulations of any kind, much easier.}
+        {\small\fontseries{l}\selectfont Fun project on my spare time where I recreated in Rust the old Microsoft Money software, using the iced.rs framework.}
 
-    \resumeProjectHeading
-        {ExoBuilds}{https://github.com/exobuilds}
-        {Rust, Rocket, Docker, REST}
-        
-        {\small\fontseries{l}\selectfont Website providing insights and statistics for League of Legends, made in Rust, using the rocket.rs framework, and MongoDB to store the data.}
-      
       \resumeProjectHeading
-        {Astra \& Cometia}{https://github.com/cometia}
-        {Project-Lead, Lead-Dev, Java, Spigot}
+        {Babel}{https://github.com/paulcomte/babel}
+        {C++, Qt, Makefile, Sqlite, Asio}
         
-        {\small\fontseries{l}\selectfont Project Lead and Lead Developer for a private Minecraft server that had a total of 50 players. Java Development of multiple themed game modes plugins using the Spigot library, and a custom-made API to ease the coding process.}
+        {\small\fontseries{l}\selectfont Lightweight TCP Chat App made in C++ with UDP voice communication. Server using Boost Asio and Client using Qt. }
+
+    %\resumeProjectHeading
+    %    {ExoBuilds}{https://github.com/exobuilds}
+    %    {Rust, Rocket, Docker, REST}
+        
+   %     {\small\fontseries{l}\selectfont Website providing insights and statistics for League of Legends, made in Rust, using the rocket.rs framework, and MongoDB to store the data.}
+      
+    %\resumeProjectHeading
+        %{Astra \& Cometia}{https://github.com/cometia}
+        %{Project-Lead, Lead-Dev, Java, Spigot}
+        
+        %{\small\fontseries{l}\selectfont Project Lead and Lead Developer for a private Minecraft server that had a total of 50 players. Java Development of multiple themed game modes plugins using the Spigot library, and a custom-made API to ease the coding process.}
       
     \resumeSubHeadingListEnd
 
+
+%----------- EDUCATION -----------
+
+\sectiontitle{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+
+
+    %\resumeEducationDescHeading
+      %{Master's Degree in Computer Science}{September 2020 - September 2025}
+      %{EPITECH}{France}
+      %{Bachelor's Degree in Computer Science obtained in July 2023}
+
+      \resumeEducationHeading
+      {Master's Degree in Computer Science}{September 2020 - September 2025}
+      {EPITECH}{France}
+      \resumeItemListStart
+        \resumeItem{Bachelor's Degree in Computer Science obtained in July 2023}
+        \resumeItem{Led a team of 7 developers on a 3 year-long innovation project, aimed towards scientists and industries, simplifying the process of developing any simulation, ranging from simple crowd simulation to car crash, or even astrodynamics simulations. \\
+        Overcoming many challenges such as working in remote and big time zone differences.}
+        %Implementing SigNoz monitoring tool, and WebRTC client <=> engine communication }}
+      \resumeItemListEnd
+
+    \vspace{5pt}
+
+    \resumeEducationHeading
+      {Exchange Student in Computer Science
+      % \normalfont{(Admission rate: 0.09\%)}
+      }{September 2023 - July 2024}
+      {Korea University}{South Korea}
+
+  \resumeSubHeadingListEnd
 
 
 %----------- RELEVANT COURSEWORK -----------
